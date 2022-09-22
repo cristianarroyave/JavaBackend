@@ -1,0 +1,13 @@
+package cursojava.spring.springboot.servicios;
+
+public enum ErroresDeServicio {
+
+	ERROR_GENERAL,
+	EMPLEADO_NO_EXISTE,
+	TAREA_NO_EXISTE,
+	IMPUTACION_NO_CREADA, 
+	TAREA_NO_ASIGNADA_A_EMPLEADO, 
+	TAREA_FUERA_DE_RANGO_DE_FECHAS,
+	FECHA_FIN_ANTERIOR_A_HOY
+}
+
