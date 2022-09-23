@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import cursojava.spring.springboot.dto.ProyectoDTO;
+import cursojava.spring.springboot.dto.TareaDTO;
 import cursojava.spring.springboot.proyectos.entidades.Proyecto;
 import cursojava.spring.springboot.proyectos.entidades.Tarea;
 import cursojava.spring.springboot.proyectos.repositorios.RepositorioEmpleados;
@@ -89,7 +90,25 @@ public class Controlador {
 			)
 	public ResponseEntity<?> getTareasDeProyecto(@PathVariable(name = "codigoProyecto") Integer codigoProyecto)
 	{
-		List<Tarea> tareas = srvTareas.getTareasDeProyecto(codigoProyecto);
-		return ResponseEntity.ok(tareas);
+		try {
+			List<Tarea> tareas = srvTareas.getTareasDeProyecto(codigoProyecto);
+			return ResponseEntity.ok(tareas);
+		} catch (ServicioException e) {
+			return ResponseEntity.badRequest().body(e.getDatos());
+		}
+	}
+	
+	@CrossOrigin(origins = "http://localhost:3000")
+	@PostMapping(
+			path = "/tareas/{codigoProyecto}"
+			)
+	public ResponseEntity<?> altaTareaDeProyecto(@PathVariable(name = "codigoProyecto") Integer codigoProyecto, @RequestBody TareaDTO tareaDto)
+	{
+		try {
+			Tarea tarea = srvTareas.altaTareaDeProyecto(tareaDto, codigoProyecto);
+			return ResponseEntity.ok(tarea);
+		} catch (ServicioException e) {
+			return ResponseEntity.badRequest().body(e.getDatos());
+		}
 	}
 }

@@ -74,6 +74,12 @@ public class TareaDTO {
 	public void setHorasRealizadas(BigDecimal horasRealizadas) {
 		this.horasRealizadas = horasRealizadas;
 	}
-	
+
+	@Override
+	public String toString() {
+		return String.format(
+				"TareaDTO [codigo=%s, proyecto=%s, nombre=%s, fechaInicio=%s, fechaFin=%s, horasEstimadas=%s, horasRealizadas=%s]",
+				codigo, proyecto, nombre, fechaInicio, fechaFin, horasEstimadas, horasRealizadas);
+	}
 	
 }
