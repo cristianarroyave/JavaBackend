@@ -27,6 +27,7 @@ import cursojava.spring.springboot.servicios.ServicioImputaciones;
 import cursojava.spring.springboot.servicios.ServicioProyectos;
 import cursojava.spring.springboot.servicios.ServicioTareas;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class Controlador {
 	
@@ -54,7 +55,7 @@ public class Controlador {
 	private ServicioTareas srvTareas;
 
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+//	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping(
 			path = "/proyectos"
 			)
@@ -70,7 +71,7 @@ public class Controlador {
 		}
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+//	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping(
 			path = "/proyectos"
 			)
@@ -84,7 +85,7 @@ public class Controlador {
 		}
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+//	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping(
 			path = "/tareas/{codigoProyecto}"
 			)
@@ -98,7 +99,7 @@ public class Controlador {
 		}
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+//	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 	@PostMapping(
 			path = "/tareas/{codigoProyecto}"
 			)
@@ -106,7 +107,7 @@ public class Controlador {
 	{
 		try {
 			Tarea tarea = srvTareas.altaTareaDeProyecto(tareaDto, codigoProyecto);
-			return ResponseEntity.ok(tarea);
+			return new ResponseEntity<Tarea>(tarea, HttpStatus.OK);
 		} catch (ServicioException e) {
 			return ResponseEntity.badRequest().body(e.getDatos());
 		}
