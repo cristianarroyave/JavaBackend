@@ -55,7 +55,6 @@ public class Controlador {
 	private ServicioTareas srvTareas;
 
 	
-//	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping(
 			path = "/proyectos"
 			)
@@ -63,7 +62,6 @@ public class Controlador {
 	{
 		try {
 			List<Proyecto> findAll = repoProyectos.findAll();
-			System.out.println(findAll);
 			return ResponseEntity.ok(findAll);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -71,7 +69,6 @@ public class Controlador {
 		}
 	}
 	
-//	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping(
 			path = "/proyectos"
 			)
@@ -85,7 +82,6 @@ public class Controlador {
 		}
 	}
 	
-//	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping(
 			path = "/tareas/{codigoProyecto}"
 			)
@@ -99,7 +95,6 @@ public class Controlador {
 		}
 	}
 	
-//	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 	@PostMapping(
 			path = "/tareas/{codigoProyecto}"
 			)
