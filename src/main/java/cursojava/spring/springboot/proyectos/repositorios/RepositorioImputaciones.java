@@ -25,6 +25,8 @@ public interface RepositorioImputaciones extends JpaRepository<Imputacion, Integ
 	@Query("select imp from Imputacion imp WHERE imp.empleado.nif = ?1 AND imp.tarea.codigo = ?2 AND imp.fecha = ?3")
 	List<Imputacion> buscarPorTodo(String nifEmpleado, Integer codigoTarea, Date fecha);
 	
+	List<Imputacion> findByTarea(Tarea tarea);
+	
 }
 
 

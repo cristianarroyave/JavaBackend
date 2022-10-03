@@ -12,6 +12,8 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 @Table(schema = "MODELOPROYECTOS", name = "IMPUTACIONES")
@@ -35,6 +37,7 @@ public class Imputacion {
 			@JoinColumn(name = "TAREA", referencedColumnName = "CODIGO")
 		}
 	)
+	@JsonIgnore
 	private Tarea tarea;
 	
 	private Date fecha;

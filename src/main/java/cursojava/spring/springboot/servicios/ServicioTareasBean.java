@@ -1,5 +1,6 @@
 package cursojava.spring.springboot.servicios;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -55,6 +56,14 @@ public class ServicioTareasBean implements ServicioTareas {
 				throw new ServicioException(new DatosError<>(ErroresDeServicio.PROYECTO_NO_EXISTE, "El proyecto no existe", proyecto));
 			}
 			Tarea tarea = tareaDtoToEntity(tareaDto);
+			if(tarea.getFechaFin().before(tarea.getFechaInicio()))
+			{
+				throw new ServicioException(new DatosError<>(ErroresDeServicio.FECHA_FIN_ANTERIOR_A_FECHA_INICIO, "La fecha de fin es inferior a la fecha de inicio", proyecto));
+			}
+			if(tarea.getFechaFin().before(new Date()))
+			{
+				throw new ServicioException(new DatosError<>(ErroresDeServicio.FECHA_FIN_ANTERIOR_A_HOY, "La fecha de fin es anterior al dia de hoy", tarea));
+			}
 			tarea.setProyecto(proyecto.get());
 			return repoTareas.save(tarea);
 		} catch (ServicioException e ) {

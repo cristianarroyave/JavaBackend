@@ -15,8 +15,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import cursojava.spring.springboot.dto.ImputacionDTO;
 import cursojava.spring.springboot.dto.ProyectoDTO;
 import cursojava.spring.springboot.dto.TareaDTO;
+import cursojava.spring.springboot.proyectos.entidades.Imputacion;
 import cursojava.spring.springboot.proyectos.entidades.Proyecto;
 import cursojava.spring.springboot.proyectos.entidades.Tarea;
 import cursojava.spring.springboot.proyectos.repositorios.RepositorioEmpleados;
@@ -103,6 +105,19 @@ public class Controlador {
 		try {
 			Tarea tarea = srvTareas.altaTareaDeProyecto(tareaDto, codigoProyecto);
 			return new ResponseEntity<Tarea>(tarea, HttpStatus.OK);
+		} catch (ServicioException e) {
+			return ResponseEntity.badRequest().body(e.getDatos());
+		}
+	}
+	
+	@GetMapping(
+			path = "/imputaciones/{codigoTarea}"
+			)
+	public ResponseEntity<?> getImputacionesDeTarea(@PathVariable(name = "codigoTarea") Integer codigoTarea)
+	{
+		try {
+			List<ImputacionDTO> imputaciones = srvImputacion.buscarImputacionesPorTarea(codigoTarea);
+			return ResponseEntity.ok(imputaciones);
 		} catch (ServicioException e) {
 			return ResponseEntity.badRequest().body(e.getDatos());
 		}

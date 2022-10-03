@@ -2,10 +2,13 @@ package cursojava.spring.springboot.dto;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class ImputacionDTO {
 
 	private String empleado;
 	
+	@JsonIgnore
 	private Integer tarea;
 	
 	private Date fecha;
@@ -13,6 +16,8 @@ public class ImputacionDTO {
 	private Integer numeroHoras;
 	
 	private String descripcion;
+	
+	public ImputacionDTO() {};
 
 	public ImputacionDTO(String empleado, Integer tarea, Date fecha, Integer numeroHoras, String descripcion) {
 		this.empleado = empleado;
