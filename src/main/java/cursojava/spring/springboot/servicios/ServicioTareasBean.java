@@ -1,9 +1,7 @@
 package cursojava.spring.springboot.servicios;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,11 +33,11 @@ public class ServicioTareasBean implements ServicioTareas {
 	{
 		try {
 			Optional<Proyecto> proyecto = repoProyectos.findById(id);
-			if(proyecto.isEmpty())
+			if(!proyecto.isPresent())
 			{
 				throw new ServicioException(new DatosError<>(ErroresDeServicio.PROYECTO_NO_EXISTE, "El proyecto no existe", proyecto));
 			}
-			return List.copyOf(proyecto.get().getTareas());
+			return new ArrayList<>(proyecto.get().getTareas());
 		} catch (ServicioException e) {
 			throw e;
 		} catch (Exception e) {
@@ -51,7 +49,7 @@ public class ServicioTareasBean implements ServicioTareas {
 	public Tarea altaTareaDeProyecto(TareaDTO tareaDto, Integer codigoProyecto) throws ServicioException {
 		try {
 			Optional<Proyecto> proyecto = repoProyectos.findById(codigoProyecto);
-			if(proyecto.isEmpty())
+			if(!proyecto.isPresent())
 			{
 				throw new ServicioException(new DatosError<>(ErroresDeServicio.PROYECTO_NO_EXISTE, "El proyecto no existe", proyecto));
 			}

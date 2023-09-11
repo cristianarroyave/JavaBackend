@@ -44,12 +44,12 @@ public class ServicioImputacionesBean implements ServicioImputaciones {
 			Optional<Empleado> empleado = repoEmpleados.findById(datos.getEmpleado());
 			Optional<Tarea> tarea = repoTareas.findById(datos.getTarea());
 			
-			if(empleado.isEmpty())
+			if(!empleado.isPresent())
 			{
 				throw new ServicioException(new DatosError<>(ErroresDeServicio.EMPLEADO_NO_EXISTE, "No existe el empleado con este nif", datos.getEmpleado()));
 			}
 			
-			if(tarea.isEmpty())
+			if(!tarea.isPresent())
 			{
 				throw new ServicioException(new DatosError<>(ErroresDeServicio.TAREA_NO_EXISTE, "No existe la tarea con este id", datos.getTarea()));
 			}
