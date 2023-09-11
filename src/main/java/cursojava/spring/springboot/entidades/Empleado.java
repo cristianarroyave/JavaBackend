@@ -1,4 +1,4 @@
-package cursojava.spring.springboot.proyectos.entidades;
+package cursojava.spring.springboot.entidades;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -15,9 +15,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Pattern;
-
-import org.springframework.data.jpa.repository.Query;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

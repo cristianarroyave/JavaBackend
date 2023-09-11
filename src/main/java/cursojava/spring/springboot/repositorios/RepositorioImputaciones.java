@@ -1,18 +1,13 @@
-package cursojava.spring.springboot.proyectos.repositorios;
+package cursojava.spring.springboot.repositorios;
 
 import java.util.Date;
 import java.util.List;
 
+import cursojava.spring.springboot.entidades.Imputacion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.repository.Repository;
 
-import cursojava.spring.springboot.proyectos.entidades.Empleado;
-import cursojava.spring.springboot.proyectos.entidades.Imputacion;
-import cursojava.spring.springboot.proyectos.entidades.Proyecto;
-import cursojava.spring.springboot.proyectos.entidades.Tarea;
+import cursojava.spring.springboot.entidades.Tarea;
 
 //public interface RepositorioProyectos extends Repository<Proyecto, Integer>{}
 

@@ -1,4 +1,4 @@
-package cursojava.spring.springboot.proyectos.entidades;
+package cursojava.spring.springboot.entidades;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -147,6 +147,8 @@ public class Tarea {
 	public void setFechaAlta(Date fechaAlta) {
 		this.fechaAlta = fechaAlta;
 	}
+
+	public Set<Empleado> getEmpleados() { return empleados; }
 
 	@Override
 	public String toString() {

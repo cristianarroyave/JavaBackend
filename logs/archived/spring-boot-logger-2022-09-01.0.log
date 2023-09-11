@@ -636,7 +636,7 @@ Caused by: org.hibernate.QueryException: could not resolve property: tareas of: 
 2022-09-01 08:51:56,895 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(3)-127.0.0.1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-09-01 08:51:56,896 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(3)-127.0.0.1] Initializing Servlet 'dispatcherServlet'
 2022-09-01 08:51:56,899 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(3)-127.0.0.1] Completed initialization in 3 ms
-2022-09-01 08:56:48,680 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-1] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@6ea3b3d9
+2022-09-01 08:56:48,680 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-1] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@6ea3b3d9
 2022-09-01 08:56:49,614 ERROR cursojava.spring.springboot.servicios.ServicioImputacionesBean [http-nio-8080-exec-1] No se pudo crear la imputacion
 cursojava.spring.springboot.servicios.ServicioException: null
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:54)
@@ -652,7 +652,7 @@ cursojava.spring.springboot.servicios.ServicioException: null
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$EnhancerBySpringCGLIB$$e40221e6.imputar(<generated>)
-	at cursojava.spring.springboot.proyectos.Controlador.altaImputacion(Controlador.java:238)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaImputacion(Controlador.java:238)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -707,7 +707,7 @@ cursojava.spring.springboot.servicios.ServicioException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-09-01 08:56:49,638 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-1] No es posible imputar
+2022-09-01 08:56:49,638 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-1] No es posible imputar
 cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.springboot.servicios.ServicioException
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:67)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$FastClassBySpringCGLIB$$1338a7be.invoke(<generated>)
@@ -722,7 +722,7 @@ cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.spring
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$EnhancerBySpringCGLIB$$e40221e6.imputar(<generated>)
-	at cursojava.spring.springboot.proyectos.Controlador.altaImputacion(Controlador.java:238)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaImputacion(Controlador.java:238)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -780,7 +780,7 @@ cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.spring
 Caused by: cursojava.spring.springboot.servicios.ServicioException: null
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:54)
 	... 67 common frames omitted
-2022-09-01 08:57:30,509 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-4] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@652002bb
+2022-09-01 08:57:30,509 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-4] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@652002bb
 2022-09-01 08:57:57,887 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2022-09-01 08:57:57,897 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Pausing ProtocolHandler ["http-nio-8080"]
 2022-09-01 08:57:57,897 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Stopping service [Tomcat]
@@ -817,7 +817,7 @@ Caused by: cursojava.spring.springboot.servicios.ServicioException: null
 2022-09-01 08:58:11,204 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-09-01 08:58:11,224 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'dispatcherServlet'
 2022-09-01 08:58:11,284 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 55 ms
-2022-09-01 08:58:11,349 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@268d80ad
+2022-09-01 08:58:11,349 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@268d80ad
 2022-09-01 08:58:11,767 ERROR cursojava.spring.springboot.servicios.ServicioImputacionesBean [http-nio-8080-exec-3] No se pudo crear la imputacion
 cursojava.spring.springboot.servicios.ServicioException: null
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:59)
@@ -833,7 +833,7 @@ cursojava.spring.springboot.servicios.ServicioException: null
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$EnhancerBySpringCGLIB$$e40221e6.imputar(<generated>)
-	at cursojava.spring.springboot.proyectos.Controlador.altaImputacion(Controlador.java:238)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaImputacion(Controlador.java:238)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -888,7 +888,7 @@ cursojava.spring.springboot.servicios.ServicioException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-09-01 08:58:11,777 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] No es posible imputar
+2022-09-01 08:58:11,777 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] No es posible imputar
 cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.springboot.servicios.ServicioException
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:67)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$FastClassBySpringCGLIB$$1338a7be.invoke(<generated>)
@@ -903,7 +903,7 @@ cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.spring
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$EnhancerBySpringCGLIB$$e40221e6.imputar(<generated>)
-	at cursojava.spring.springboot.proyectos.Controlador.altaImputacion(Controlador.java:238)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaImputacion(Controlador.java:238)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

@@ -54,7 +54,7 @@
 2022-08-30 14:35:44,141 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-30 14:35:44,151 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2022-08-30 14:35:44,189 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 23 ms
-2022-08-30 14:35:44,232 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-2] Datos de alta de proyecto Proyecto [id=null, nombre=proyecto de prueba 2, horasEstimadas=50.0, horasConsumidas=0, fechaEstimadaCierre=null, fechaCierre=Thu Jul 07 02:00:00 CEST 2022, fechaAlta=null]
+2022-08-30 14:35:44,232 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-2] Datos de alta de proyecto Proyecto [id=null, nombre=proyecto de prueba 2, horasEstimadas=50.0, horasConsumidas=0, fechaEstimadaCierre=null, fechaCierre=Thu Jul 07 02:00:00 CEST 2022, fechaAlta=null]
 2022-08-30 14:46:51,449 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2022-08-30 14:46:51,454 INFO org.apache.juli.logging.DirectJDKLog [Thread-13] Stopping service [Tomcat]
 2022-08-30 14:46:51,455 INFO org.apache.juli.logging.DirectJDKLog [Thread-13] Destroying Spring FrameworkServlet 'dispatcherServlet'

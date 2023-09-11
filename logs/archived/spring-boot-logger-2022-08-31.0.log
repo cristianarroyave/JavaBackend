@@ -261,7 +261,7 @@
 2022-08-31 08:56:55,333 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-31 08:56:55,336 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'dispatcherServlet'
 2022-08-31 08:56:55,365 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 27 ms
-2022-08-31 08:56:56,194 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] Datos de alta de proyecto Proyecto [id=null, nombre=proyecto de prueba 3, horasEstimadas=50.0, horasConsumidas=0, fechaEstimadaCierre=null, fechaCierre=Thu Jul 07 02:00:00 CEST 2022, fechaAlta=null]
+2022-08-31 08:56:56,194 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] Datos de alta de proyecto Proyecto [id=null, nombre=proyecto de prueba 3, horasEstimadas=50.0, horasConsumidas=0, fechaEstimadaCierre=null, fechaCierre=Thu Jul 07 02:00:00 CEST 2022, fechaAlta=null]
 2022-08-31 08:57:31,433 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2022-08-31 08:57:31,465 INFO org.apache.juli.logging.DirectJDKLog [Thread-31] Pausing ProtocolHandler ["http-nio-8080"]
 2022-08-31 08:57:31,468 INFO org.apache.juli.logging.DirectJDKLog [Thread-31] Stopping service [Tomcat]
@@ -527,7 +527,7 @@
 2022-08-31 09:15:21,348 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-31 09:15:21,352 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2022-08-31 09:15:21,371 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 17 ms
-2022-08-31 09:15:21,490 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-2] Datos de alta de tarea Tarea [id=null, proyecto=Proyecto [id=2, nombre=Proyecto prueba2, horasEstimadas=70, horasConsumidas=0, fechaEstimadaCierre=null, fechaCierre=null, fechaAlta=Mon Aug 29 14:07:28 CEST 2022], nombre=Programar MUCHO, fechaInicio=Sat Jan 01 00:00:00 CET 2022, fechaFin=Mon Mar 03 00:00:00 CET 2025, horasEstimadas=70, horasRealizadas=2, fechaAlta=Mon Aug 29 14:25:25 CEST 2022]
+2022-08-31 09:15:21,490 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-2] Datos de alta de tarea Tarea [id=null, proyecto=Proyecto [id=2, nombre=Proyecto prueba2, horasEstimadas=70, horasConsumidas=0, fechaEstimadaCierre=null, fechaCierre=null, fechaAlta=Mon Aug 29 14:07:28 CEST 2022], nombre=Programar MUCHO, fechaInicio=Sat Jan 01 00:00:00 CET 2022, fechaFin=Mon Mar 03 00:00:00 CET 2025, horasEstimadas=70, horasRealizadas=2, fechaAlta=Mon Aug 29 14:25:25 CEST 2022]
 2022-08-31 09:17:44,902 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2022-08-31 09:17:44,969 INFO org.apache.juli.logging.DirectJDKLog [Thread-63] Pausing ProtocolHandler ["http-nio-8080"]
 2022-08-31 09:17:44,972 INFO org.apache.juli.logging.DirectJDKLog [Thread-63] Stopping service [Tomcat]
@@ -688,9 +688,9 @@
 2022-08-31 09:34:06,699 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-08-31 09:34:06,998 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2022-08-31 09:34:07,118 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'controlador' method 
-cursojava.spring.springboot.proyectos.Controlador#altaTarea1(TareaDTO)
+cursojava.spring.springboot.controladores.ControladorProyectos#altaTarea1(TareaDTO)
 to {POST [/tareas], consumes [application/json], produces [application/json]}: There is already 'controlador' bean method
-cursojava.spring.springboot.proyectos.Controlador#altaTarea(Tarea) mapped.
+cursojava.spring.springboot.controladores.ControladorProyectos#altaTarea(Tarea) mapped.
 2022-08-31 09:34:07,119 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-08-31 09:34:07,120 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-21 - Shutdown initiated...
 2022-08-31 09:34:07,134 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-21 - Shutdown completed.
@@ -700,9 +700,9 @@ cursojava.spring.springboot.proyectos.Controlador#altaTarea(Tarea) mapped.
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2022-08-31 09:34:07,258 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'controlador' method 
-cursojava.spring.springboot.proyectos.Controlador#altaTarea1(TareaDTO)
+cursojava.spring.springboot.controladores.ControladorProyectos#altaTarea1(TareaDTO)
 to {POST [/tareas], consumes [application/json], produces [application/json]}: There is already 'controlador' bean method
-cursojava.spring.springboot.proyectos.Controlador#altaTarea(Tarea) mapped.
+cursojava.spring.springboot.controladores.ControladorProyectos#altaTarea(Tarea) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
@@ -726,9 +726,9 @@ cursojava.spring.springboot.proyectos.Controlador#altaTarea(Tarea) mapped.
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'controlador' method 
-cursojava.spring.springboot.proyectos.Controlador#altaTarea1(TareaDTO)
+cursojava.spring.springboot.controladores.ControladorProyectos#altaTarea1(TareaDTO)
 to {POST [/tareas], consumes [application/json], produces [application/json]}: There is already 'controlador' bean method
-cursojava.spring.springboot.proyectos.Controlador#altaTarea(Tarea) mapped.
+cursojava.spring.springboot.controladores.ControladorProyectos#altaTarea(Tarea) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
@@ -904,8 +904,8 @@ cursojava.spring.springboot.proyectos.Controlador#altaTarea(Tarea) mapped.
 2022-08-31 09:53:23,843 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2022-08-31 09:53:23,856 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 12 ms
 2022-08-31 09:53:51,430 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-3] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-2022-08-31 09:54:19,950 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-4] Datos de alta de empleado Empleado [nif=49532232J, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
-2022-08-31 09:54:46,420 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-5] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 09:54:19,950 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-4] Datos de alta de empleado Empleado [nif=49532232J, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 09:54:46,420 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-5] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
 2022-08-31 10:13:04,649 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2022-08-31 10:13:04,652 INFO org.apache.juli.logging.DirectJDKLog [Thread-102] Pausing ProtocolHandler ["http-nio-8080"]
 2022-08-31 10:13:04,652 INFO org.apache.juli.logging.DirectJDKLog [Thread-102] Stopping service [Tomcat]
@@ -1452,8 +1452,8 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2022-08-31 10:32:25,258 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2022-08-31 10:32:25,321 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 62 ms
 2022-08-31 10:32:25,341 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-2022-08-31 10:32:35,970 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] Datos de alta de empleado Empleado [nif=49532Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
-2022-08-31 10:32:36,613 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] No se pudo cargar la tarea
+2022-08-31 10:32:35,970 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] Datos de alta de empleado Empleado [nif=49532Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 10:32:36,613 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] No se pudo cargar la tarea
 javax.validation.ConstraintViolationException: Validation failed for classes [cursojava.spring.springboot.proyectos.entidades.Empleado] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='Nif incorrecto', propertyPath=nif, rootBeanClass=class cursojava.spring.springboot.proyectos.entidades.Empleado, messageTemplate='Nif incorrecto'}
@@ -1513,7 +1513,7 @@ List of constraint violations:[
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy40/jdk.proxy40.$Proxy428.saveAndFlush(Unknown Source)
-	at cursojava.spring.springboot.proyectos.Controlador.altaTarea(Controlador.java:198)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaTarea(Controlador.java:198)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1568,10 +1568,10 @@ List of constraint violations:[
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-08-31 11:04:28,121 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-5] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
-2022-08-31 11:04:41,737 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-6] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
-2022-08-31 11:05:32,913 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-7] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
-2022-08-31 11:05:33,039 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-7] No se pudo cargar la tarea
+2022-08-31 11:04:28,121 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-5] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 11:04:41,737 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-6] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 11:05:32,913 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-7] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 11:05:33,039 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-7] No se pudo cargar la tarea
 javax.validation.ConstraintViolationException: Validation failed for classes [cursojava.spring.springboot.proyectos.entidades.Empleado] during update time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='Nif incorrecto', propertyPath=nif, rootBeanClass=class cursojava.spring.springboot.proyectos.entidades.Empleado, messageTemplate='Nif incorrecto'}
@@ -1631,7 +1631,7 @@ List of constraint violations:[
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy40/jdk.proxy40.$Proxy428.saveAndFlush(Unknown Source)
-	at cursojava.spring.springboot.proyectos.Controlador.altaTarea(Controlador.java:198)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaTarea(Controlador.java:198)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1686,8 +1686,8 @@ List of constraint violations:[
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-08-31 11:05:57,753 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-10] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
-2022-08-31 11:05:57,868 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-10] No se pudo cargar la tarea
+2022-08-31 11:05:57,753 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-10] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 11:05:57,868 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-10] No se pudo cargar la tarea
 javax.validation.ConstraintViolationException: Validation failed for classes [cursojava.spring.springboot.proyectos.entidades.Empleado] during update time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='Nif incorrecto', propertyPath=nif, rootBeanClass=class cursojava.spring.springboot.proyectos.entidades.Empleado, messageTemplate='Nif incorrecto'}
@@ -1747,7 +1747,7 @@ List of constraint violations:[
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy40/jdk.proxy40.$Proxy428.saveAndFlush(Unknown Source)
-	at cursojava.spring.springboot.proyectos.Controlador.altaTarea(Controlador.java:198)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaTarea(Controlador.java:198)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1802,8 +1802,8 @@ List of constraint violations:[
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-08-31 11:06:04,796 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-1] Datos de alta de empleado Empleado [nif=49532232U, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
-2022-08-31 11:06:04,835 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-1] No se pudo cargar la tarea
+2022-08-31 11:06:04,796 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-1] Datos de alta de empleado Empleado [nif=49532232U, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 11:06:04,835 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-1] No se pudo cargar la tarea
 javax.validation.ConstraintViolationException: Validation failed for classes [cursojava.spring.springboot.proyectos.entidades.Empleado] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='Nif incorrecto', propertyPath=nif, rootBeanClass=class cursojava.spring.springboot.proyectos.entidades.Empleado, messageTemplate='Nif incorrecto'}
@@ -1863,7 +1863,7 @@ List of constraint violations:[
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy40/jdk.proxy40.$Proxy428.saveAndFlush(Unknown Source)
-	at cursojava.spring.springboot.proyectos.Controlador.altaTarea(Controlador.java:198)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaTarea(Controlador.java:198)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1918,8 +1918,8 @@ List of constraint violations:[
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-08-31 11:06:46,266 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
-2022-08-31 11:06:46,411 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] No se pudo cargar la tarea
+2022-08-31 11:06:46,266 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] Datos de alta de empleado Empleado [nif=49532232Z, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 11:06:46,411 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] No se pudo cargar la tarea
 javax.validation.ConstraintViolationException: Validation failed for classes [cursojava.spring.springboot.proyectos.entidades.Empleado] during update time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='Nif incorrecto', propertyPath=nif, rootBeanClass=class cursojava.spring.springboot.proyectos.entidades.Empleado, messageTemplate='Nif incorrecto'}
@@ -1979,7 +1979,7 @@ List of constraint violations:[
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy40/jdk.proxy40.$Proxy428.saveAndFlush(Unknown Source)
-	at cursojava.spring.springboot.proyectos.Controlador.altaTarea(Controlador.java:198)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaTarea(Controlador.java:198)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2134,7 +2134,7 @@ List of constraint violations:[
 2022-08-31 11:09:49,626 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-31 11:09:49,627 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'dispatcherServlet'
 2022-08-31 11:09:49,639 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 10 ms
-2022-08-31 11:09:49,704 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] Datos de alta de empleado Empleado [nif=49532232U, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 11:09:49,704 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] Datos de alta de empleado Empleado [nif=49532232U, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
 2022-08-31 11:10:03,845 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2022-08-31 11:10:03,848 INFO org.apache.juli.logging.DirectJDKLog [Thread-155] Pausing ProtocolHandler ["http-nio-8080"]
 2022-08-31 11:10:03,848 INFO org.apache.juli.logging.DirectJDKLog [Thread-155] Stopping service [Tomcat]
@@ -2171,8 +2171,8 @@ List of constraint violations:[
 2022-08-31 11:10:23,222 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-31 11:10:23,223 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2022-08-31 11:10:23,227 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 4 ms
-2022-08-31 11:10:23,232 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-2] Datos de alta de empleado Empleado [nif=49532232Y, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
-2022-08-31 11:10:23,254 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-2] No se pudo cargar la tarea
+2022-08-31 11:10:23,232 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-2] Datos de alta de empleado Empleado [nif=49532232Y, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 11:10:23,254 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-2] No se pudo cargar la tarea
 javax.validation.ConstraintViolationException: Validation failed for classes [cursojava.spring.springboot.proyectos.entidades.Empleado] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='Nif incorrecto', propertyPath=nif, rootBeanClass=class cursojava.spring.springboot.proyectos.entidades.Empleado, messageTemplate='Nif incorrecto'}
@@ -2232,7 +2232,7 @@ List of constraint violations:[
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy44/jdk.proxy44.$Proxy462.saveAndFlush(Unknown Source)
-	at cursojava.spring.springboot.proyectos.Controlador.altaTarea(Controlador.java:197)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaTarea(Controlador.java:197)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2355,7 +2355,7 @@ List of constraint violations:[
 2022-08-31 11:14:17,808 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-31 11:14:17,810 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2022-08-31 11:14:17,869 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 36 ms
-2022-08-31 11:14:17,902 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-2] Datos de alta de empleado Empleado [nif=49532232W, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
+2022-08-31 11:14:17,902 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-2] Datos de alta de empleado Empleado [nif=49532232W, nombre=Cristian, apellidos=Arroyave Clavijo, correo=prueba1234@gmail.com, fechaAlta=Mon Aug 29 14:38:06 CEST 2022]
 2022-08-31 11:27:14,380 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
 2022-08-31 11:27:14,402 INFO org.apache.juli.logging.DirectJDKLog [Thread-167] Pausing ProtocolHandler ["http-nio-8080"]
 2022-08-31 11:27:14,402 INFO org.apache.juli.logging.DirectJDKLog [Thread-167] Stopping service [Tomcat]
@@ -2428,8 +2428,8 @@ List of constraint violations:[
 2022-08-31 11:39:18,254 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(3)-127.0.0.1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-31 11:39:18,255 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(3)-127.0.0.1] Initializing Servlet 'dispatcherServlet'
 2022-08-31 11:39:18,260 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(3)-127.0.0.1] Completed initialization in 4 ms
-2022-08-31 11:40:16,659 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-1] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@8f16bad
-2022-08-31 11:40:24,988 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@2c023325
+2022-08-31 11:40:16,659 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-1] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@8f16bad
+2022-08-31 11:40:24,988 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@2c023325
 2022-08-31 11:43:17,781 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
 2022-08-31 11:43:17,795 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Pausing ProtocolHandler ["http-nio-8080"]
 2022-08-31 11:43:17,796 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Stopping service [Tomcat]
@@ -2570,8 +2570,8 @@ List of constraint violations:[
 2022-08-31 12:31:14,067 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-31 12:31:14,076 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2022-08-31 12:31:14,093 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
-2022-08-31 12:31:15,867 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-1] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@637fa226
-2022-08-31 12:31:49,530 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@3d6adcc9
+2022-08-31 12:31:15,867 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-1] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@637fa226
+2022-08-31 12:31:49,530 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@3d6adcc9
 2022-08-31 12:31:49,609 ERROR cursojava.spring.springboot.servicios.ServicioImputacionesBean [http-nio-8080-exec-3] No se pudo crear la imputacion
 cursojava.spring.springboot.servicios.ServicioException: null
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:44)
@@ -2587,7 +2587,7 @@ cursojava.spring.springboot.servicios.ServicioException: null
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$EnhancerBySpringCGLIB$$9c42083a.imputar(<generated>)
-	at cursojava.spring.springboot.proyectos.Controlador.altaImputacion(Controlador.java:238)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaImputacion(Controlador.java:238)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2642,7 +2642,7 @@ cursojava.spring.springboot.servicios.ServicioException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-08-31 12:31:49,663 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-3] No es posible imputar
+2022-08-31 12:31:49,663 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-3] No es posible imputar
 cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.springboot.servicios.ServicioException
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:57)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$FastClassBySpringCGLIB$$1338a7be.invoke(<generated>)
@@ -2657,7 +2657,7 @@ cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.spring
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$EnhancerBySpringCGLIB$$9c42083a.imputar(<generated>)
-	at cursojava.spring.springboot.proyectos.Controlador.altaImputacion(Controlador.java:238)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaImputacion(Controlador.java:238)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2715,7 +2715,7 @@ cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.spring
 Caused by: cursojava.spring.springboot.servicios.ServicioException: null
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:44)
 	... 67 common frames omitted
-2022-08-31 12:35:48,709 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-5] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@226688be
+2022-08-31 12:35:48,709 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-5] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@226688be
 2022-08-31 12:35:48,854 ERROR cursojava.spring.springboot.servicios.ServicioImputacionesBean [http-nio-8080-exec-5] No se pudo crear la imputacion
 cursojava.spring.springboot.servicios.ServicioException: null
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:49)
@@ -2731,7 +2731,7 @@ cursojava.spring.springboot.servicios.ServicioException: null
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$EnhancerBySpringCGLIB$$9c42083a.imputar(<generated>)
-	at cursojava.spring.springboot.proyectos.Controlador.altaImputacion(Controlador.java:238)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaImputacion(Controlador.java:238)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2786,7 +2786,7 @@ cursojava.spring.springboot.servicios.ServicioException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-08-31 12:35:48,888 ERROR cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-5] No es posible imputar
+2022-08-31 12:35:48,888 ERROR cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-5] No es posible imputar
 cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.springboot.servicios.ServicioException
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:57)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$FastClassBySpringCGLIB$$1338a7be.invoke(<generated>)
@@ -2801,7 +2801,7 @@ cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.spring
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean$$EnhancerBySpringCGLIB$$9c42083a.imputar(<generated>)
-	at cursojava.spring.springboot.proyectos.Controlador.altaImputacion(Controlador.java:238)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.altaImputacion(Controlador.java:238)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2859,7 +2859,7 @@ cursojava.spring.springboot.servicios.ServicioException: cursojava.spring.spring
 Caused by: cursojava.spring.springboot.servicios.ServicioException: null
 	at cursojava.spring.springboot.servicios.ServicioImputacionesBean.imputar(ServicioImputacionesBean.java:49)
 	... 67 common frames omitted
-2022-08-31 12:37:12,081 DEBUG cursojava.spring.springboot.proyectos.Controlador [http-nio-8080-exec-7] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@6d4025a8
+2022-08-31 12:37:12,081 DEBUG cursojava.spring.springboot.controladores.ControladorProyectos [http-nio-8080-exec-7] datos de imputacion cursojava.spring.springboot.dto.ImputacionDTO@6d4025a8
 2022-08-31 12:50:03,894 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2022-08-31 12:50:03,913 INFO org.apache.juli.logging.DirectJDKLog [Thread-7] Pausing ProtocolHandler ["http-nio-8080"]
 2022-08-31 12:50:03,917 INFO org.apache.juli.logging.DirectJDKLog [Thread-7] Stopping service [Tomcat]

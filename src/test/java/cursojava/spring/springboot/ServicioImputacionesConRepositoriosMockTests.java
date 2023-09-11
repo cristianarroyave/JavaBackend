@@ -1,30 +1,21 @@
 package cursojava.spring.springboot;
 
 import java.sql.Date;
-import java.util.List;
 import java.util.Optional;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.test.annotation.Rollback;
-import org.springframework.transaction.annotation.Transactional;
 
 import cursojava.spring.springboot.dto.ImputacionDTO;
-import cursojava.spring.springboot.proyectos.entidades.Empleado;
-import cursojava.spring.springboot.proyectos.entidades.Imputacion;
-import cursojava.spring.springboot.proyectos.entidades.Tarea;
-import cursojava.spring.springboot.proyectos.repositorios.RepositorioEmpleados;
-import cursojava.spring.springboot.proyectos.repositorios.RepositorioImputaciones;
-import cursojava.spring.springboot.proyectos.repositorios.RepositorioTareas;
-import cursojava.spring.springboot.servicios.ErroresDeServicio;
-import cursojava.spring.springboot.servicios.ServicioException;
-import cursojava.spring.springboot.servicios.ServicioImputaciones;
+import cursojava.spring.springboot.entidades.Empleado;
+import cursojava.spring.springboot.entidades.Tarea;
+import cursojava.spring.springboot.repositorios.RepositorioEmpleados;
+import cursojava.spring.springboot.repositorios.RepositorioImputaciones;
+import cursojava.spring.springboot.repositorios.RepositorioTareas;
 import cursojava.spring.springboot.servicios.ServicioImputacionesBean;
 
 import static org.junit.jupiter.api.Assertions.*;

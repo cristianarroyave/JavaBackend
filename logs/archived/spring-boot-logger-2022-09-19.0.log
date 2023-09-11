@@ -1105,7 +1105,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field srvImputacion in cursojava.spring.springboot.proyectos.Controlador required a bean of type 'cursojava.spring.springboot.servicios.ServicioImputaciones' that could not be found.
+Field srvImputacion in cursojava.spring.springboot.controladores.ControladorProyectos required a bean of type 'cursojava.spring.springboot.servicios.ServicioImputaciones' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -1148,7 +1148,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field srvImputacion in cursojava.spring.springboot.proyectos.Controlador required a bean of type 'cursojava.spring.springboot.servicios.ServicioImputaciones' that could not be found.
+Field srvImputacion in cursojava.spring.springboot.controladores.ControladorProyectos required a bean of type 'cursojava.spring.springboot.servicios.ServicioImputaciones' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -1191,7 +1191,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field srvImputacion in cursojava.spring.springboot.proyectos.Controlador required a bean of type 'cursojava.spring.springboot.servicios.ServicioImputaciones' that could not be found.
+Field srvImputacion in cursojava.spring.springboot.controladores.ControladorProyectos required a bean of type 'cursojava.spring.springboot.servicios.ServicioImputaciones' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -1234,7 +1234,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field srvImputacion in cursojava.spring.springboot.proyectos.Controlador required a bean of type 'cursojava.spring.springboot.servicios.ServicioImputaciones' that could not be found.
+Field srvImputacion in cursojava.spring.springboot.controladores.ControladorProyectos required a bean of type 'cursojava.spring.springboot.servicios.ServicioImputaciones' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -1565,7 +1565,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field srvProyecto in cursojava.spring.springboot.proyectos.Controlador required a bean of type 'cursojava.spring.springboot.servicios.ServicioProyectos' that could not be found.
+Field srvProyecto in cursojava.spring.springboot.controladores.ControladorProyectos required a bean of type 'cursojava.spring.springboot.servicios.ServicioProyectos' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)

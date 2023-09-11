@@ -71,6 +71,4 @@ public class ProyectoDTO {
 				"ProyectoDTO [codigo=%s, nombre=%s, horasEstimadas=%s, horasConsumidas=%s, fechaEstimadaCierre=%s, fechaCierre=%s]",
 				codigo, nombre, horasEstimadas, horasConsumidas, fechaEstimadaCierre, fechaCierre);
 	}
-	
-	
 }

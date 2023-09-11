@@ -18,7 +18,7 @@ import org.springframework.http.ResponseEntity;
 import cursojava.spring.springboot.dto.ImputacionDTO;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-class ControladorImputacionesTest {
+class ControladorProyectosImputacionesTest {
 
 	@LocalServerPort
 	private int puerto;

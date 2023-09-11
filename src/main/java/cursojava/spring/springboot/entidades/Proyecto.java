@@ -1,4 +1,4 @@
-package cursojava.spring.springboot.proyectos.entidades;
+package cursojava.spring.springboot.entidades;
 
 import java.math.BigDecimal;
 import java.util.Date;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.modelmapper.ModelMapper;
+import cursojava.spring.springboot.controladores.ControladorProyectos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,15 +12,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import cursojava.spring.springboot.dto.ImputacionDTO;
-import cursojava.spring.springboot.dto.ProyectoDTO;
-import cursojava.spring.springboot.proyectos.Controlador;
-import cursojava.spring.springboot.proyectos.entidades.Empleado;
-import cursojava.spring.springboot.proyectos.entidades.Imputacion;
-import cursojava.spring.springboot.proyectos.entidades.Proyecto;
-import cursojava.spring.springboot.proyectos.entidades.Tarea;
-import cursojava.spring.springboot.proyectos.repositorios.RepositorioEmpleados;
-import cursojava.spring.springboot.proyectos.repositorios.RepositorioImputaciones;
-import cursojava.spring.springboot.proyectos.repositorios.RepositorioTareas;
+import cursojava.spring.springboot.entidades.Empleado;
+import cursojava.spring.springboot.entidades.Imputacion;
+import cursojava.spring.springboot.entidades.Tarea;
+import cursojava.spring.springboot.repositorios.RepositorioEmpleados;
+import cursojava.spring.springboot.repositorios.RepositorioImputaciones;
+import cursojava.spring.springboot.repositorios.RepositorioTareas;
 
 @Service
 @Transactional(rollbackFor = ServicioException.class)
@@ -35,7 +32,7 @@ public class ServicioImputacionesBean implements ServicioImputaciones {
 	@Autowired
 	private RepositorioImputaciones repoImputaciones;
 
-	private Logger logger = LoggerFactory.getLogger(Controlador.class);
+	private Logger logger = LoggerFactory.getLogger(ControladorProyectos.class);
 	
 	@Override
 	public void imputar(ImputacionDTO datos) throws ServicioException

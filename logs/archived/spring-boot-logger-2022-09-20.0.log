@@ -443,7 +443,7 @@ java.lang.IllegalArgumentException: Parameter value [2] did not match expected t
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy15/jdk.proxy15.$Proxy272.findByProyecto(Unknown Source)
-	at cursojava.spring.springboot.proyectos.Controlador.getTareasDeProyecto(Controlador.java:88)
+	at cursojava.spring.springboot.controladores.ControladorProyectos.getTareasDeProyecto(Controlador.java:88)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
