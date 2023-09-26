@@ -26,7 +26,7 @@ public class Imputacion {
 	@ManyToOne
 	@JoinColumns(
 		{
-			@JoinColumn(name = "EMPLEADO", referencedColumnName = "NIF")
+			@JoinColumn(name = "EMPLEADO", referencedColumnName = "CODIGO")
 		}
 	)
 	private Empleado empleado;

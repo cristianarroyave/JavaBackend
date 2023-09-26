@@ -23,12 +23,13 @@ CREATE TABLE modeloproyectos.proyectos (
 -- DROP TABLE modeloproyectos.empleados;
 
 CREATE TABLE modeloproyectos.empleados (
+    codigo serial4 NOT NULL,
 	nif varchar(9) NOT NULL,
 	nombre varchar(40) NOT NULL,
 	apellidos varchar(80) NOT NULL,
 	correo varchar(80) NOT NULL,
 	fecha_alta timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-	CONSTRAINT empleados_pk PRIMARY KEY (nif)
+	CONSTRAINT empleados_pk PRIMARY KEY (codigo)
 );
 
 
@@ -60,13 +61,13 @@ CREATE TABLE modeloproyectos.tareas (
 
 CREATE TABLE modeloproyectos.imputaciones (
 	codigo serial4 NOT NULL,
-	empleado varchar(9) NOT NULL,
+	empleado int4 NOT NULL,
 	tarea int4 NOT NULL,
 	fecha date NULL,
 	numero_horas int4 NULL,
 	descripcion varchar(256) NULL,
 	CONSTRAINT imputaciones_pk PRIMARY KEY (codigo),
-	CONSTRAINT imputaciones_empleados_fk FOREIGN KEY (empleado) REFERENCES modeloproyectos.empleados(nif),
+	CONSTRAINT imputaciones_empleados_fk FOREIGN KEY (empleado) REFERENCES modeloproyectos.empleados(codigo),
 	CONSTRAINT imputaciones_tareas_fk FOREIGN KEY (tarea) REFERENCES modeloproyectos.tareas(codigo)
 );
 
@@ -79,8 +80,21 @@ CREATE TABLE modeloproyectos.imputaciones (
 
 CREATE TABLE modeloproyectos.asignaciones (
 	tarea int4 NOT NULL,
-	empleado varchar(9) NOT NULL,
+	empleado int4 NOT NULL,
 	CONSTRAINT asignaciones_pk PRIMARY KEY (tarea, empleado),
-	CONSTRAINT asignaciones_empleados_fk FOREIGN KEY (empleado) REFERENCES modeloproyectos.empleados(nif),
+	CONSTRAINT asignaciones_empleados_fk FOREIGN KEY (empleado) REFERENCES modeloproyectos.empleados(codigo),
 	CONSTRAINT asignaciones_tareas_fk FOREIGN KEY (tarea) REFERENCES modeloproyectos.tareas(codigo)
 );
+
+CREATE TABLE modeloproyectos.usuarios (
+    codigo serial4 NOT NULL,
+    empleado int4 NOT NULL,
+    usuario VARCHAR(255) NULL,
+    password VARCHAR(255) NULL,
+    activo BOOLEAN NOT NULL,
+    CONSTRAINT usuarios_pk PRIMARY KEY (codigo),
+    CONSTRAINT usuarios_empleados_pk FOREIGN KEY (empleado) REFERENCES modeloproyectos.empleados(codigo)
+)
+
+ALTER TABLE modeloproyectos.empleados
+ADD CONSTRAINT empleados_usuarios_fk FOREIGN KEY (usuario) REFERENCES modeloproyectos.usuarios(codigo)

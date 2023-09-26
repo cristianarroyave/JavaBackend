@@ -10,7 +10,6 @@ public class NifValidator implements ConstraintValidator<Nif, String>{
 	
 	@Override
 	public boolean isValid(String value, ConstraintValidatorContext context) {
-		System.out.println(value);
 		return !(value != null && value.trim().equals("") && value.matches("^\\d{8}[A-Z]$"));
 	}
 	

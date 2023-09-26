@@ -1,4 +1,4 @@
-package cursojava.spring.springboot.servicios;
+package cursojava.spring.springboot.excepciones;
 
 public enum ErroresDeServicio {
 
@@ -10,6 +10,8 @@ public enum ErroresDeServicio {
 	TAREA_FUERA_DE_RANGO_DE_FECHAS,
 	FECHA_FIN_ANTERIOR_A_HOY,
 	PROYECTO_NO_EXISTE,
-	FECHA_FIN_ANTERIOR_A_FECHA_INICIO
+	FECHA_FIN_ANTERIOR_A_FECHA_INICIO,
+
+	NIF_O_CORREO_EXISTENTE
 }
 

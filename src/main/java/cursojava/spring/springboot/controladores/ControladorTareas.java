@@ -3,7 +3,7 @@ package cursojava.spring.springboot.controladores;
 import cursojava.spring.springboot.dto.AsignacionDTO;
 import cursojava.spring.springboot.dto.TareaDTO;
 import cursojava.spring.springboot.entidades.Tarea;
-import cursojava.spring.springboot.servicios.ServicioException;
+import cursojava.spring.springboot.excepciones.ServicioException;
 import cursojava.spring.springboot.servicios.ServicioTareas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

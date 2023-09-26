@@ -1,7 +1,7 @@
 package cursojava.spring.springboot.controladores;
 
 import cursojava.spring.springboot.dto.ImputacionDTO;
-import cursojava.spring.springboot.servicios.ServicioException;
+import cursojava.spring.springboot.excepciones.ServicioException;
 import cursojava.spring.springboot.servicios.ServicioImputaciones;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -3,6 +3,7 @@ package cursojava.spring.springboot.servicios;
 import java.util.List;
 
 import cursojava.spring.springboot.dto.ImputacionDTO;
+import cursojava.spring.springboot.excepciones.ServicioException;
 
 public interface ServicioImputaciones {
 

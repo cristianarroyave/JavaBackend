@@ -1,4 +1,4 @@
-package cursojava.spring.springboot.servicios;
+package cursojava.spring.springboot.excepciones;
 
 public class ServicioException extends Exception {
 	

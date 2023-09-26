@@ -1,10 +1,14 @@
-package cursojava.spring.springboot.servicios;
+package cursojava.spring.springboot.servicios.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import cursojava.spring.springboot.controladores.ControladorProyectos;
+import cursojava.spring.springboot.excepciones.DatosError;
+import cursojava.spring.springboot.excepciones.ErroresDeServicio;
+import cursojava.spring.springboot.excepciones.ServicioException;
+import cursojava.spring.springboot.servicios.ServicioImputaciones;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +55,7 @@ public class ServicioImputacionesBean implements ServicioImputaciones {
 				throw new ServicioException(new DatosError<>(ErroresDeServicio.TAREA_NO_EXISTE, "No existe la tarea con este id", datos.getTarea()));
 			}
 			
-			if(!repoEmpleados.estaLaTareaAsignadaAEmpleado(datos.getEmpleado(), datos.getTarea()))
+			if(!repoEmpleados.tieneLaTareaAsignada(datos.getEmpleado(), datos.getTarea()))
 			{
 				throw new ServicioException(new DatosError<>(ErroresDeServicio.TAREA_NO_ASIGNADA_A_EMPLEADO, "La tarea no está asignada a empleado", datos));
 			}

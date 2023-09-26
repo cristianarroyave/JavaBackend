@@ -16,7 +16,7 @@ import cursojava.spring.springboot.entidades.Tarea;
 import cursojava.spring.springboot.repositorios.RepositorioEmpleados;
 import cursojava.spring.springboot.repositorios.RepositorioImputaciones;
 import cursojava.spring.springboot.repositorios.RepositorioTareas;
-import cursojava.spring.springboot.servicios.ServicioImputacionesBean;
+import cursojava.spring.springboot.servicios.impl.ServicioImputacionesBean;
 
 import static org.junit.jupiter.api.Assertions.*;
 

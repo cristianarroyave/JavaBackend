@@ -14,8 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 import cursojava.spring.springboot.dto.ImputacionDTO;
 import cursojava.spring.springboot.entidades.Imputacion;
 import cursojava.spring.springboot.repositorios.RepositorioImputaciones;
-import cursojava.spring.springboot.servicios.ErroresDeServicio;
-import cursojava.spring.springboot.servicios.ServicioException;
+import cursojava.spring.springboot.excepciones.ErroresDeServicio;
+import cursojava.spring.springboot.excepciones.ServicioException;
 import cursojava.spring.springboot.servicios.ServicioImputaciones;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -4,21 +4,12 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import cursojava.spring.springboot.validaciones.Nif;
+import org.springframework.data.annotation.CreatedDate;
 
 @Entity
 @Table(schema = "MODELOPROYECTOS", name = "EMPLEADOS")
@@ -28,6 +19,9 @@ import cursojava.spring.springboot.validaciones.Nif;
 public class Empleado {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer codigo;
+
 	@Nif
 	private String nif;
 	
@@ -36,23 +30,43 @@ public class Empleado {
 	private String apellidos;
 	
 	private String correo;
-	
+
+	@CreatedDate
 	@Column(name = "FECHA_ALTA", insertable = false, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaAlta;
 	
 	@JsonIgnore
-	@ManyToMany()
+	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable( schema = "MODELOPROYECTOS", 
 				name = "ASIGNACIONES", 
-				joinColumns = {@JoinColumn(name = "EMPLEADO", referencedColumnName = "NIF")}, 
+				joinColumns = {@JoinColumn(name = "EMPLEADO", referencedColumnName = "CODIGO")},
 				inverseJoinColumns = { @JoinColumn(name = "TAREA", referencedColumnName = "CODIGO")}
 	)
 	private Set<Tarea> asignaciones = new HashSet<Tarea>();
 	
 	@JsonIgnore
-	@OneToMany(mappedBy = "empleado")
+	@OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL)
 	private Set<Imputacion> imputaciones = new HashSet<Imputacion>();
+
+	@OneToOne(mappedBy = "empleado")
+	private Usuario usuario;
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 
 	public Empleado() {}
 
