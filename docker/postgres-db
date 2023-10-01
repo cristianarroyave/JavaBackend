@@ -1,0 +1,4 @@
+FROM postgres
+ENV POSTGRES_PASSWORD P0stgr3s@dmin
+ENV POSTGRES_DB postgres
+COPY ddl.sql /docker-entrypoint-initdb.d/
